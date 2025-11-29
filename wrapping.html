@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <title>Магия заботы в упаковке</title>
+
+  <style>
+  /* Шрифты */
+  @font-face {
+    font-family: 'TenorSans';
+    src: url('TenorSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Vetrino';
+    src: url('Vetrino.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'TenorSans', "Inter", "Segoe UI", system-ui, sans-serif;
+    background: #f5f5f3;
+    color: #2e2e2e;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    opacity: 0;
+    animation: fadeInBody 0.8s ease-out forwards;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  /* Заголовок */
+  .title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #6F806E;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    font-family: 'Vetrino', "Inter", "Segoe UI", system-ui, sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  }
+
+  /* Контент */
+  .card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+  }
+
+  .card p {
+    margin-bottom: 1.2rem;
+  }
+
+  .card strong {
+    color: #6F806E;
+    font-weight: 700;
+    display: block;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .gift-advice {
+    margin: 1.5rem 0;
+  }
+
+  .gift-advice p {
+    margin-bottom: 1rem;
+  }
+
+  .final-thought {
+    background: #f8f8f6;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 0 0;
+    border-left: 4px solid #6F806E;
+  }
+
+  /* Блок вдохновения */
+  .inspiration-box {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 18px;
+    margin-top: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out 0.7s forwards;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .inspiration-text {
+    margin-bottom: 1.2rem;
+    color: #2e2e2e;
+  }
+
+  .pinterest-link {
+    display: inline-block;
+    background: #6F806E;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    transform: scale(0.95);
+    margin-top: 0.5rem;
+  }
+
+  .pinterest-link:hover {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(111, 128, 110, 0.3);
+  }
+
+  /* Анимации */
+  @keyframes fadeInBody {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Медиа-запросы */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2rem;
+    }
+    .card, .inspiration-box {
+      padding: 1.4rem;
+    }
+    .final-thought {
+      padding: 1.2rem;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Магия заботы в упаковке</h1>
+
+    <div class="card">
+      <p>Пока за окном кружит снег, самое время устроиться поудобнее, включить любимый плейлист, зажечь свечу и заняться одним из самых приятных дел — подготовкой сюрпризов для друзей. Сегодня мы не просто будем упаковывать подарки, мы будем наполнять их теплом своих рук и самыми добрыми мыслями. Откроем набор с украшениями и превратим этот процесс в маленький праздник.</p>
+
+      <p>Самая ценная часть подарка — та, которую не купишь в магазине.</p>
+
+      <div class="gift-advice">
+        <p><strong>Напишите несколько тёплых слов</strong> на подарочном ярлычке. Пусть это будет не просто «От Деда Мороза», а искреннее пожелание или приятное воспоминание, связанное с этим человеком.</p>
+
+        <p><strong>Создайте маленький «сюрприз под обёрткой»</strong> — на внутренней стороне упаковки можно оставить шуточный рисунок или забавную надпись, которую друг обнаружит, разворачивая подарок.</p>
+      </div>
+
+      <div class="final-thought">
+        <p>Позвольте себе это время — не как рутинную обязанность, а как медитацию наедине со своими мыслями и пожеланиями для близких людей.</p>
+      </div>
+    </div>
+
+    <!-- <div class="inspiration-box">
+      <div class="inspiration-text">Для вдохновения — идеи упаковки подарков</div>
+
+      <a href="https://pin.it/3tdU3vc2n" target="_blank" class="pinterest-link">
+        Открыть идеи
+      </a>
+    </div> -->
+  </div>
+</body>
+</html>
