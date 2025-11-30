@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: "TenorSans";
-  src: url("TenorSans-Regular.woff2") format("woff2");
+  src: url("../fonts/TenorSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Vetrino";
-  src: url("Vetrino.woff2") format("woff2");
+  src: url("../fonts/Vetrino.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -165,6 +165,46 @@ strong {
   color: var(--red);
 }
 
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: clamp(10px, 3vw, 14px) 0 clamp(8px, 2vw, 12px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+  font-size: clamp(14px, 3.4vw, 16px);
+}
+
+.btn.primary {
+  background: var(--red);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(195, 60, 47, 0.2);
+}
+
+.btn.ghost {
+  border-color: rgba(53, 91, 70, 0.3);
+  color: var(--green);
+  background: rgba(53, 91, 70, 0.08);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
 .hero {
   background: linear-gradient(135deg, rgba(53, 91, 70, 0.16), rgba(53, 91, 70, 0.06));
   border: 2px solid rgba(53, 91, 70, 0.22);
@@ -207,6 +247,11 @@ strong {
   border-radius: 50%;
   background: var(--red);
   box-shadow: 0 0 0 4px rgba(195, 60, 47, 0.12);
+}
+
+.card ul ul {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .action-row {
