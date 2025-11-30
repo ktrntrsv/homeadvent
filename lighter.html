@@ -5,248 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Зажигающее меню</title>
-
-  <style>
-  /* Шрифты */
-  @font-face {
-    font-family: 'TenorSans';
-    src: url('TenorSans-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Vetrino';
-    src: url('Vetrino.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: 'TenorSans', "Inter", "Segoe UI", system-ui, sans-serif;
-    background: #f5f5f3;
-    color: #2e2e2e;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    opacity: 0;
-    animation: fadeInBody 0.8s ease-out forwards;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  /* Заголовок */
-  .title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #6F806E;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
-    font-family: 'Vetrino', "Inter", "Segoe UI", system-ui, sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-  }
-
-  /* Контент */
-  .card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
-  }
-
-  .card p {
-    margin-bottom: 1.2rem;
-  }
-
-  .card strong {
-    color: #6F806E;
-    font-weight: 700;
-    display: block;
-    margin: 2rem 0 1rem 0;
-    font-size: 1.2rem;
-  }
-
-  .menu-category {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  .menu-category p {
-    margin-bottom: 0.8rem;
-  }
-
-  .final-advice {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1rem 0 0 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  /* Блок вдохновения */
-  .inspiration-box {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    margin-top: 2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.7s forwards;
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  .inspiration-text {
-    margin-bottom: 1.2rem;
-    color: #2e2e2e;
-  }
-
-  .pinterest-link {
-    display: inline-block;
-    background: #6F806E;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    transform: scale(0.95);
-    margin-top: 0.5rem;
-  }
-
-  .pinterest-link:hover {
-    transform: scale(1);
-    box-shadow: 0 5px 15px rgba(111, 128, 110, 0.3);
-  }
-
-  /* Анимации */
-  @keyframes fadeInBody {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Медиа-запросы */
-  @media (max-width: 480px) {
-    .title {
-      font-size: 2rem;
-    }
-    .card, .inspiration-box {
-      padding: 1.4rem;
-    }
-    .menu-category,
-    .final-advice {
-      padding: 1.2rem;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1 class="title">Зажигающее меню</h1>
-
-    <div class="card">
-      <p>Даже самые крутые и, казалось бы, вечные зажигалки нуждаются в зарядке. Так и мы: важно делать вещи, которые наполняют энергией, радостью и мотивацией. Сегодня мы предлагаем составить своё «зажигающее меню» — список дел, которые делают вас ярче и счастливее.</p>
-
-      <strong>1. Закуски — быстрые дела до 5 минут</strong>
-      <div class="menu-category">
-        <p>• Потанцевать под любимый трек</p>
-        <p>• Попрыгать или размяться</p>
-        <p>• Выйти подышать на балкон или посмотреть в окно</p>
-        <p>• Надеть любимое украшение</p>
-        <p>• Намазать руки кремом</p>
-        <p>• Быстро написать себе мотивирующую заметку</p>
-        <p>• Включить любимую песню и подпевать</p>
-      </div>
-
-      <strong>2. Салаты — задачи 5–15 минут</strong>
-      <div class="menu-category">
-        <p>• Сделать лёгкую растяжку или зарядку</p>
-        <p>• Выпить кофе или чай, наслаждаясь моментом</p>
-        <p>• Прогуляться по дому с любимой музыкой</p>
-        <p>• Нарисовать небольшой эскиз или зарисовку</p>
-        <p>• Послушать подкаст или аудиокнигу</p>
-        <p>• Сделать мини-медитацию или дыхательное упражнение</p>
-      </div>
-
-      <strong>3. Основные блюда — час для себя</strong>
-      <div class="menu-category">
-        <p>• Заняться рукоделием: картины по номерам, вязание, вышивка</p>
-        <p>• Приготовить необычное блюдо или выпечку</p>
-        <p>• Посмотреть вдохновляющий фильм или сериал</p>
-        <p>• Написать маленькую историю или дневниковую заметку</p>
-        <p>• Провести фотосессию дома с любимыми вещами</p>
-      </div>
-
-      <strong>4. Десерты — приятные бездумные задачи</strong>
-      <div class="menu-category">
-        <p>• Составлять доски на Pinterest или сохранять вдохновляющие картинки</p>
-        <p>• Играть в простые казуальные игры (головоломки, пазлы, «три в ряд»)</p>
-        <p>• Планировать уютные дела в календаре или заметках</p>
-        <p>• Создавать короткие фото-коллажи или видео для себя</p>
-      </div>
-
-      <strong>5. Спешал от шефа — дела на неограниченное время</strong>
-      <div class="menu-category">
-        <p>• Съездить за город, на природу</p>
-        <p>• Сходить на массаж или в спа</p>
-        <p>• Провести день без гаджетов, наслаждаясь собой</p>
-        <p>• Встретиться с друзьями или устроить уютный вечер дома</p>
-        <p>• Записаться на мастер-класс или попробовать новое хобби</p>
-      </div>
-
-        <p><strong>Напишите свой персонализированный список</strong> и держите его на видном месте — на холодильнике, в блокноте или на рабочем столе. Пусть он будет вашей маленькой зарядкой радости, к которой можно обратиться в любой момент, когда хочется зажечься и наполниться энергией.</p>
-    </div>
-
-    <!-- <div class="inspiration-box">
-      <div class="inspiration-text">Для вдохновения — идеи для вашего меню</div>
-
-      <a href="https://pin.it/3tdU3vc2n" target="_blank" class="pinterest-link">
-        Открыть идеи
-      </a>
-    </div> -->
+  <div class="snow" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
+
+  <main class="page">
+    <header>
+      <h1>Зажигающее меню</h1>
+      <p class="lead">Составьте список дел, которые наполняют энергией, радостью и мотивацией — вашу личную зарядку на любой день.</p>
+    </header>
+
+    <section class="card section">
+      <h2>1. Закуски — до 5 минут</h2>
+      <div class="tag">мгновенный заряд</div>
+      <ul>
+        <li>Потанцевать под любимый трек</li>
+        <li>Попрыгать или размяться</li>
+        <li>Выйти подышать на балкон или посмотреть в окно</li>
+        <li>Надеть любимое украшение</li>
+        <li>Намазать руки кремом</li>
+        <li>Быстро написать себе мотивирующую заметку</li>
+        <li>Включить любимую песню и подпевать</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>2. Салаты — 5–15 минут</h2>
+      <div class="tag">чуть больше времени</div>
+      <ul>
+        <li>Сделать лёгкую растяжку или зарядку</li>
+        <li>Выпить кофе или чай, наслаждаясь моментом</li>
+        <li>Прогуляться по дому с любимой музыкой</li>
+        <li>Нарисовать небольшой эскиз или зарисовку</li>
+        <li>Послушать подкаст или аудиокнигу</li>
+        <li>Сделать мини-медитацию или дыхательное упражнение</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>3. Основные блюда — час для себя</h2>
+      <div class="tag">глубокий прогрев</div>
+      <ul>
+        <li>Заняться рукоделием: картины по номерам, вязание, вышивка</li>
+        <li>Приготовить необычное блюдо или выпечку</li>
+        <li>Посмотреть вдохновляющий фильм или сериал</li>
+        <li>Написать маленькую историю или дневниковую заметку</li>
+        <li>Провести фотосессию дома с любимыми вещами</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>5. Спешал от шефа — время без лимитов</h2>
+      <div class="tag">особое блюдо</div>
+      <ul>
+        <li>Съездить за город, на природу</li>
+        <li>Сходить на массаж или в спа</li>
+        <li>Провести день без гаджетов, наслаждаясь собой</li>
+        <li>Встретиться с друзьями или устроить уютный вечер дома</li>
+        <li>Записаться на мастер-класс или попробовать новое хобби</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>4. Десерты — приятные бездумные задачи</h2>
+      <div class="tag">лёгкое удовольствие</div>
+      <ul>
+        <li>Составлять доски на Pinterest или сохранять вдохновляющие картинки</li>
+        <li>Играть в простые казуальные игры (головоломки, пазлы, «три в ряд»)</li>
+        <li>Планировать уютные дела в календаре или заметках</li>
+        <li>Создавать короткие фото-коллажи или видео для себя</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>Соберите свой список</h2>
+      <p><strong>Держите его на виду</strong> — на холодильнике, в блокноте или на рабочем столе. Пусть это будет ваша маленькая зарядка радости, к которой можно обратиться в любой момент.</p>
+    </section>
+
+    <p class="footer-note">Берегите огонь, который вас зажигает.</p>
+  </main>
 </body>
 </html>

@@ -5,237 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Праздник, который можно испечь</title>
-
-  <style>
-  /* Шрифты */
-  @font-face {
-    font-family: 'TenorSans';
-    src: url('TenorSans-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Vetrino';
-    src: url('Vetrino.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: 'TenorSans', "Inter", "Segoe UI", system-ui, sans-serif;
-    background: #f5f5f3;
-    color: #2e2e2e;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    opacity: 0;
-    animation: fadeInBody 0.8s ease-out forwards;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  /* Заголовок */
-  .title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #6F806E;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
-    font-family: 'Vetrino', "Inter", "Segoe UI", system-ui, sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-  }
-
-  /* Контент */
-  .card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
-  }
-
-  .card p {
-    margin-bottom: 1.2rem;
-  }
-
-  .card strong {
-    color: #6F806E;
-    font-weight: 700;
-    display: block;
-    margin: 1.5rem 0 1rem 0;
-    font-size: 1.2rem;
-  }
-
-  .recipe-title {
-    color: #6F806E;
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin: 1.5rem 0 1rem 0;
-    display: block;
-  }
-
-  .ingredients {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  .ingredients p {
-    margin-bottom: 0.8rem;
-  }
-
-  .instructions {
-    margin: 1.5rem 0;
-  }
-
-  .instructions p {
-    margin-bottom: 1rem;
-  }
-
-  .final-note {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0 0 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  /* Блок вдохновения */
-  .inspiration-box {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    margin-top: 2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.7s forwards;
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  .inspiration-text {
-    margin-bottom: 1.2rem;
-    color: #2e2e2e;
-  }
-
-  .pinterest-link {
-    display: inline-block;
-    background: #6F806E;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    transform: scale(0.95);
-    margin-top: 0.5rem;
-  }
-
-  .pinterest-link:hover {
-    transform: scale(1);
-    box-shadow: 0 5px 15px rgba(111, 128, 110, 0.3);
-  }
-
-  /* Анимации */
-  @keyframes fadeInBody {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Медиа-запросы */
-  @media (max-width: 480px) {
-    .title {
-      font-size: 2rem;
-    }
-    .card, .inspiration-box {
-      padding: 1.4rem;
-    }
-    .ingredients,
-    .final-note {
-      padding: 1.2rem;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1 class="title">Праздник, который можно испечь</h1>
-
-    <div class="card">
-      <p>Атмосферу праздника можно не только создать, но и... испечь! Сегодня мы приготовим новогоднее печенье.</p>
-
-      <span class="recipe-title">Простое песочное печенье</span>
-
-      <p>Вам понадобится:</p>
-
-      <div class="ingredients">
-        <p>• 200 г размягчённого сливочного масла</p>
-        <p>• 150 г сахара</p>
-        <p>• 1 яйцо</p>
-        <p>• 300 г муки</p>
-        <p>• Щепотка ванилина</p>
-        <p>• Секретный ингредиент выберете на ваш вкус – это может быть лимонная цедра с соком лимона, или имбирь, или молотые орехи, возможно вы сможете сочетать эти варианты для более сложного вкуса печенья</p>
-      </div>
-
-      <div class="instructions">
-        <p>Разотрите масло с сахаром, добавьте яйцо, ваш секретный ингредиент и ванилин. Постепенно введите муку. Заверните тесто в плёнку и уберите в холодильник на 30 минут.</p>
-        <p>Раскатайте, вырежьте фигурки с помощью ваших формочек и выпекайте при 180°C 10-15 минут до золотистого цвета.</p>
-      </div>
-
-      <div class="final-note">
-        <p>Обязательно попробуйте первое, ещё тёплое печенье. Оставшаяся выпечка станет идеальным поводом для маленького праздника. Накройте стол, заварите душистый чай и пригласите домочадцев на чаепитие.</p>
-      </div>
-    </div>
-
-    <!-- <div class="inspiration-box">
-      <div class="inspiration-text">Для вдохновения — Pinterest-доска с новогодними рецептами</div>
-
-      <a href="https://pin.it/3tdU3vc2n" target="_blank" class="pinterest-link">
-        Открыть идеи
-      </a>
-    </div> -->
+  <div class="snow" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
+
+  <main class="page">
+    <header>
+      <h1>Праздник, который можно испечь</h1>
+      <p class="lead">Атмосферу праздника можно не только создать, но и испечь — простое новогоднее печенье подарит дому аромат и тёплое настроение.</p>
+    </header>
+
+    <section class="card section">
+      <h2>Простое песочное печенье</h2>
+      <div class="tag">секретный акцент</div>
+      <p>Вам понадобится:</p>
+      <ul>
+        <li>200 г размягчённого сливочного масла</li>
+        <li>150 г сахара</li>
+        <li>1 яйцо</li>
+        <li>300 г муки</li>
+        <li>Щепотка ванилина</li>
+        <li>Секретный ингредиент на ваш вкус: лимонная цедра с соком, имбирь, молотые орехи — можно комбинировать</li>
+      </ul>
+      <div class="divider"></div>
+      <p><strong>Как готовить</strong> — разотрите масло с сахаром, добавьте яйцо, выбранный аромат и ванилин. Постепенно введите муку, заверните тесто в плёнку и охладите 30 минут.</p>
+      <p>Раскатайте, вырежьте фигурки, выпекайте при 180°C 10–15 минут до золотистого цвета.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Праздничный момент</h2>
+      <p>Попробуйте первое тёплое печенье сразу. Остальное — повод устроить чаепитие с душистым чаем и уютной беседой.</p>
+    </section>
+
+    <p class="footer-note">Пусть аромат свежей выпечки наполняет дом.</p>
+  </main>
 </body>
 </html>

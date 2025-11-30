@@ -5,194 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Оживите пламя искусством</title>
-
-  <style>
-  /* Шрифты */
-  @font-face {
-    font-family: 'TenorSans';
-    src: url('TenorSans-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Vetrino';
-    src: url('Vetrino.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: 'TenorSans', "Inter", "Segoe UI", system-ui, sans-serif;
-    background: #f5f5f3;
-    color: #2e2e2e;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    opacity: 0;
-    animation: fadeInBody 0.8s ease-out forwards;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  /* Заголовок */
-  .title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #6F806E;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
-    font-family: 'Vetrino', "Inter", "Segoe UI", system-ui, sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-  }
-
-  /* Контент */
-  .card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
-  }
-
-  .card p {
-    margin-bottom: 1.2rem;
-  }
-
-  .preparation {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  .magic {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0 0 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  /* Блок вдохновения */
-  .inspiration-box {
-    background: #f8f8f6;
-    border-left: 4px solid #6F806E;
-    padding: 2rem;
-    border-radius: 18px;
-    margin-top: 2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.7s forwards;
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  .inspiration-text {
-    margin-bottom: 1.2rem;
-    color: #2e2e2e;
-  }
-
-  .pinterest-button {
-    display: inline-block;
-    background: #6F806E;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    transform: scale(0.95);
-    margin-top: 0.5rem;
-  }
-
-  .pinterest-button:hover {
-    transform: scale(1);
-    box-shadow: 0 5px 15px rgba(111, 128, 110, 0.3);
-  }
-
-  /* Анимации */
-  @keyframes fadeInBody {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Медиа-запросы */
-  @media (max-width: 480px) {
-    .title {
-      font-size: 2rem;
-    }
-    .card, .inspiration-box {
-      padding: 1.4rem;
-    }
-    .preparation,
-    .magic {
-      padding: 1.2rem;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1 class="title">Оживите пламя искусством</h1>
-
-    <div class="card">
-      <p>В самый тёмный и долгий вечер года нет ничего уютнее живого огня. А если этот огонь живёт в свече, которую вы создали своими руками, её тепло становится по-настоящему волшебным. Сегодня мы предлагаем вам не просто зажечь свечу, а вдохнуть в неё душу, превратив в уникальное новогоднее украшение.</p>
-
-      <p>Достаньте свечи, кисточки и краски. Застелите стол бумагой или плёнкой, поставьте стакан с водой для промывания кистей. Пусть ваш творческий уголок будет одновременно удобным и вдохновляющим.</p>
-
-      <div class="magic">
-        <p>После высыхания дайте жизни своему творению. Наблюдайте, как язычки пламя оживляют ваши рисунки, отбрасывая на стены таинственные тени-предсказания. Эта свеча станет не просто украшением, а визуальной поэзией зимнего вечера.</p>
-      </div>
-    </div>
-
-    <div class="inspiration-box">
-      <div class="inspiration-text">Для вдохновения — идеи росписи свечей</div>
-
-      <a href="https://pin.it/70eSzmhuy" target="_blank" class="pinterest-button">
-        Открыть идеи
-      </a>
-    </div>
+  <div class="snow" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
+
+  <main class="page">
+    <header>
+      <h1>Оживите пламя искусством</h1>
+      <p class="lead">В самый тёмный и долгий вечер года нет ничего уютнее живого огня. А если этот огонь живёт в свече, которую вы создали своими руками, её тепло становится по-настоящему волшебным.</p>
+    </header>
+
+    <section class="card section">
+      <h2>Подготовьте уютное место</h2>
+      <p>Достаньте свечи, кисточки и краски. Застелите стол бумагой или плёнкой, поставьте стакан с водой для промывания кистей. Пусть ваш творческий уголок будет одновременно удобным и вдохновляющим.</p>
+      <p><strong>Оживите рисунок</strong> — наблюдайте, как язычки пламени оживляют ваши узоры и отбрасывают на стены таинственные тени. Эта свеча станет не просто украшением, а визуальной поэзией зимнего вечера.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Вдохновение</h2>
+      <p>Идеи росписи свечей, чтобы добавить настроения.</p>
+      <a class="button" href="https://pin.it/70eSzmhuy" target="_blank" rel="noopener noreferrer">Открыть идеи</a>
+    </section>
+
+    <p class="footer-note">Пусть тепло свечи мягко светит весь вечер.</p>
+  </main>
 </body>
 </html>

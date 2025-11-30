@@ -5,219 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="favicon.png">
   <title>Список подарков</title>
-
-  <style>
-  /* Шрифты */
-  @font-face {
-    font-family: 'TenorSans';
-    src: url('TenorSans-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Vetrino';
-    src: url('Vetrino.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  body {
-    font-family: 'TenorSans', "Inter", "Segoe UI", system-ui, sans-serif;
-    background: #f5f5f3;
-    color: #2e2e2e;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-    font-weight: 500;
-    opacity: 0;
-    animation: fadeInBody 0.8s ease-out forwards;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .container {
-    max-width: 700px;
-    width: 100%;
-  }
-
-  /* Заголовок */
-  .title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #6F806E;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5px;
-    font-family: 'Vetrino', "Inter", "Segoe UI", system-ui, sans-serif;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.3s forwards;
-  }
-
-  /* Контент */
-  .card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.5s forwards;
-  }
-
-  .card p {
-    margin-bottom: 1.2rem;
-  }
-
-  .card ol {
-    margin-left: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .card li {
-    margin-bottom: 1.5rem;
-  }
-
-  .card strong {
-    color: #6F806E;
-    font-weight: 700;
-  }
-
-  .self-care {
-    background: #f8f8f6;
-    padding: 1.5rem;
-    border-radius: 12px;
-    margin: 1.5rem 0;
-    border-left: 4px solid #6F806E;
-  }
-
-  .apps-list {
-    margin: 1rem 0;
-  }
-
-  .apps-list p {
-    margin-bottom: 0.8rem;
-  }
-
-  /* Блок вдохновения */
-  .inspiration-box {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 18px;
-    margin-top: 2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out 0.7s forwards;
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-  }
-
-  .inspiration-text {
-    margin-bottom: 1.2rem;
-    color: #2e2e2e;
-  }
-
-  .pinterest-link {
-    display: inline-block;
-    background: #6F806E;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    transform: scale(0.95);
-    margin-top: 0.5rem;
-  }
-
-  .pinterest-link:hover {
-    transform: scale(1);
-    box-shadow: 0 5px 15px rgba(111, 128, 110, 0.3);
-  }
-
-  /* Анимации */
-  @keyframes fadeInBody {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* Медиа-запросы */
-  @media (max-width: 480px) {
-    .title {
-      font-size: 2rem;
-    }
-    .card, .inspiration-box {
-      padding: 1.4rem;
-    }
-    .self-care {
-      padding: 1.2rem;
-    }
-  }
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container">
-    <h1 class="title">Подарок как личное послание</h1>
-
-    <div class="card">
-      <p>Иногда подготовка к празднику начинается не с ёлки, а с заботы — о тех, кого мы любим. Сегодня составь список новогодних подарков для близких — что-то, что согреет сердце и принесёт радость. Вот несколько идей:</p>
-
-      <ol>
-        <li><strong>Миксуй подарки и уточняй желания</strong> — не бойся спросить вишлист у близких. Составь подарок из двух частей: что-то из их списка желаний и что-то от себя. Так все точно останутся довольны.</li>
-
-        <li><strong>Добавь немного тепла и ностальгии</strong> — придумывая свой подарок, подумай о том, что может вызвать приятные воспоминания. Сделай что-то своими руками, но простое и полезное: вязаный снуд или модный Pinterest-чепчик, ароматную свечу с рисунками, баночку с какао или травяным сбором. Главное — чтобы подарок был искренним, удобным и радовал того, кому предназначен.</li>
-
-        <li><strong>Закажи заранее</strong> — особенно если используешь маркетплейсы. В последние дни перед праздником часто бывают задержки, и неприятно будет не получить подарок в последний момент.</li>
-
-        <li><strong>Персонализируй оформление</strong> — укрась всё, что подаришь, используя элементы из подарка: подпиши открытки, напиши личные письма, добавь маленькие милые рисуночки и бантики. Такие детали делают подарок особенным.</li>
-      </ol>
-
-      <div class="self-care">
-        <p><strong>Не забудь о себе</strong> — составь и свой список желаний. Это отличный способ напомнить себе, что ты тоже заслуживаешь внимания и маленьких чудес. Для удобства можно использовать приложения:</p>
-
-        <div class="apps-list">
-          <p><strong>Подаркус</strong> — позволяет добавлять подарки прямо с маркетплейсов, удобно делиться своими идеями с близкими и отслеживать, кто что уже выбрал, чтобы не повторяться и ничего не забыть.</p>
-          <p><strong>OhMyWishes</strong> — помогает создавать красивые интерактивные вишлисты с изображениями и ссылками на товары, чтобы всё выглядело аккуратно и вдохновляюще.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div class="inspiration-box">
-      <div class="inspiration-text">Для вдохновения — Pinterest-доска с идеями подарков</div>
-
-      <a href="https://pin.it/3tdU3vc2n" target="_blank" class="pinterest-link">
-        Открыть идеи
-      </a>
-    </div> -->
+  <div class="snow" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
+
+  <main class="page">
+    <header>
+      <h1>Подарок как личное послание</h1>
+      <p class="lead">Составь список новогодних подарков для близких — то, что согреет сердце и принесёт радость.</p>
+    </header>
+
+    <section class="card section">
+      <h2>Идеи для списка</h2>
+      <ol>
+        <li><strong>Миксуй желания</strong> — спроси вишлист у близких. Собери подарок из двух частей: что-то из их списка и что-то от себя.</li>
+        <li><strong>Добавь тепло и ностальгию</strong> — выбери то, что вызывает приятные воспоминания. Вязаный снуд, ароматная свеча, баночка какао — главное, чтобы было искренне и удобно.</li>
+        <li><strong>Закажи заранее</strong> — маркетплейсы и почта любят затягивать перед праздниками, лучше не рисковать сроками.</li>
+        <li><strong>Персонализируй оформление</strong> — подпиши открытки, добавь маленькие рисунки и бантики. Детали делают подарок особенным.</li>
+      </ol>
+    </section>
+
+    <section class="card section">
+      <h2>Не забудь о себе</h2>
+      <p>Составь и свой список желаний — ты тоже заслуживаешь внимания и маленьких чудес. Помогут приложения:</p>
+      <ul>
+        <li><strong>Подаркус</strong> — добавление подарков с маркетплейсов, удобно делиться идеями и отслеживать, кто что уже выбрал.</li>
+        <li><strong>OhMyWishes</strong> — красивые интерактивные вишлисты с изображениями и ссылками.</li>
+      </ul>
+    </section>
+
+    <p class="footer-note">Пусть каждый подарок будет тёплым посланием.</p>
+  </main>
 </body>
 </html>
